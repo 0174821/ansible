@@ -1,0 +1,9 @@
+---
+- name: 测试主机连通性
+  hosts: all
+  remote_user: ansible
+  become: yes
+  gather_facts: no
+  tasks:
+    - name: 执行ping命令测试连通性
+      ping:
